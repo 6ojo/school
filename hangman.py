@@ -68,11 +68,14 @@ while True:
 
     elif len(guess) == 1 and guess.isalpha():
         if guess in guessed_letters:
+            clear_screen()
             print(f'{guess} already guessed! try again')
         elif guess in secret:
+            clear_screen()
             print(f'{guess} is in the secret!')
             guessed_letters.append(guess)
         else:
+            clear_screen()
             print(f'{guess} is not in the secret. +1 point')
             points += 1
             guessed_letters.append(guess)
