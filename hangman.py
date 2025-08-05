@@ -47,10 +47,12 @@ while True:
     print(f"guessed: {' '.join(guessed_letters)}")
     print('\n' + current_phrase)
 
+   
+
     #check for win
     if "_" not in current_phrase:
         print('\nyou win!')
-        print('the secret was {secret}')
+        print(f'the secret was {secret}')
         break
     #get guess
     guess = input("\nguess a letter, or say 'solve' to solve!\n")
@@ -58,7 +60,7 @@ while True:
         solve_guess = input("\nwhat's your guess?\n")
         if solve_guess == secret:
             print('\nyou win!')
-            print(f'the secret was {secret}')
+            print("the secret was " + secret)
             break
         else:
             print('incorrect! +1 point\n')
