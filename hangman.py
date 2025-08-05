@@ -14,8 +14,8 @@ print('welcome to hangman!')
 time.sleep(1)
 
 secret = input('what is the secret to guess?\n').lower()
-
-print('pass to player 2')
+#clear countdown
+print('-_-_-_-pass to player 2-_-_-_-')
 def countdown(t):
     while t:
         mins, secs = divmod(t, 60)
