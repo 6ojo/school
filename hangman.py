@@ -68,10 +68,10 @@ while True:
         if guess in guessed_letters:
             print(f'{guess} already guessed! try again')
         elif guess in secret:
-            print('{guess} is in the secret!')
+            print(f'{guess} is in the secret!')
             guessed_letters.append(guess)
         else:
-            print('{guess} is not in the secret. +1 point')
+            print(f'{guess} is not in the secret. +1 point')
             points += 1
             guessed_letters.append(guess)
     else:
