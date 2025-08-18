@@ -1,0 +1,19 @@
+h1 {
+    color: blue;
+    font-family: Segoe UI;
+}
+
+#title {
+    font-size: large;
+}
+
+.container {
+    text-align: center;
+}
+
+    body {
+      background-image: url('images/fuku.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
