@@ -10,6 +10,16 @@ body {
   font-style: normal;
 }
 
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
 /* * {
     border-color: black;
     border-style: solid;
@@ -23,6 +33,7 @@ body {
 #cat-info  {
     margin-top: 50px;
     display: flex;
+    animation: fade-up 1s;
 }
 
 
@@ -37,6 +48,8 @@ p, h2 {
     font-family: "Cal Sans";
     color: rgb(155, 157, 255);
     text-align: center;
+    animation: fade-up 0.5s;
+
 }
 
 .description {
