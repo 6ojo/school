@@ -1,15 +1,24 @@
-body {
-    background-color:rgb(27, 24, 24);
-    margin: 0;
-    padding: 0;
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: #1B1818; 
+    margin: 0;
+    padding: 0;
+    color: aliceblue; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Imported font class */
 .cal-sans-regular {
   font-family: "Cal Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Fade-up animation on load */
 @keyframes fade-up {
     0% {
         opacity: 0;
@@ -20,77 +29,108 @@ body {
         transform: translateY(0px) scale(1);
     }
 }
-/* * {
-    border-color: black;
-    border-style: solid;
-} */
+
+/* --- Header and Title Section --- */
 
 #title-bar {
-    height: 50vh;
+    /* Uses viewport height to be responsive, centered with flexbox */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem; /* Adds padding on smaller screens */
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(3rem, 10vw, 7.5rem); /* Responsive font size */
+    font-family: "Cal Sans", sans-serif;
+    color: #9B9DFF;
+    animation: fade-up 0.5s;
+    margin: 0;
+}
+
+.description {
+    font-size: clamp(1.5rem, 5vw, 3.75rem); /* Responsive font size */
+    margin: 1rem 0;
+}
+
+.nav-links {
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive font size */
+    color: #9B9DFF;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.nav-links:hover {
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 
+/* --- Content Sections --- */
+
 #cat-info  {
-    margin-top: 50px;
     display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center;
+    gap: 2rem; /* Adds space between image and text */
+    margin: 100px auto; /* Adds vertical spacing and centers the container */
+    padding: 2rem;
+    max-width: 1200px; /* Constrains width on large screens */
     animation: fade-up 1s;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Reverses the order for every other section for visual variety */
+#cat-info:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 
 p, h2 {
-    text-align:center;
-    vertical-align: center;
-    font-size: xx-large;
+    text-align: left; /* Aligns text to the left for readability */
+    font-size: clamp(1.25rem, 3vw, 1.75rem); /* Responsive font size */
+    line-height: 1.6; /* Improves readability */
 }
 
-.title {
-    font-size: 120px;
-    font-family: "Cal Sans";
-    color: rgb(155, 157, 255);
-    text-align: center;
-    animation: fade-up 0.5s;
-
+h2 {
+   font-size: clamp(2rem, 5vw, 3rem);
+   font-family: "Cal Sans", sans-serif;
+   color: #9B9DFF;
+   margin-bottom: 1rem;
 }
 
-.description {
-    font-size: 60px;
-}
-
-
-.nav-links {
-    font-size: 50px;
-}
+/* --- Media Elements (Images & Video) --- */
 
 .left {
-    width: 49%;
-    max-height: 50vh; 
-    object-fit: contain;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 1; /* Allows the element to grow and shrink */
+    min-width: 300px; /* Prevents it from getting too small */
+    max-width: 50%;
+    max-height: 70vh;
+    object-fit: cover; /* Changed to cover to fill space nicely */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .left:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
     box-shadow: 0 10px 20px rgba(155, 157, 255, 0.3);
 }
 
 .video {
-    margin-right: 5vw;
+    margin-right: 0; /* Removed specific margin */
 }
 
+/* --- Text Content --- */
+
 .right {
-    color:aliceblue;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 49%;
-    height: 100%;
-    margin: 0;
+    flex: 1; /* Allows the element to grow and shrink */
+    min-width: 300px; /* Prevents it from getting too small */
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
