@@ -54,6 +54,7 @@ body {
 .description {
     font-size: clamp(1.5rem, 5vw, 3.75rem); /* Responsive font size */
     margin: 1rem 0;
+    text-align: center;
 }
 
 .nav-links {
@@ -153,3 +154,4 @@ h2 {
     color: #fff; /* Link becomes white on hover */
     text-decoration: underline;
 }
+
