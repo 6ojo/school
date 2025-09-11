@@ -105,8 +105,20 @@ let htmlBody3 = `<!DOCTYPE html>
 
 //Verify your outputs
 
-function pCounter(body){
-    let
+function pCounter(htmlBody){
+    let count = 0
+    let currIndex = 0
+
+    while(true)
+    {
+        (currIndex htmlBody.indexOf("<p>", currIndex)
+         if (currIndex =! -1)
+            {count++}
+        else
+        {
+        return counter}
+    currIndex++
+    }     
 }
     
 
@@ -118,4 +130,5 @@ console.log(pCounter(htmlBody2)) //2
 console.log(pTagReader(htmlBody2)) //['Fire dragons are often described as powerful beings that breathe flames and guard treasures.', 'They are feared in many stories but also respected for their immense strength and wisdom.']
 
 console.log(pCounter(htmlBody3)) //4
+
 console.log(pTagReader(htmlBody3)) //['Purple dye was once so rare and expensive that it was worn only by royalty and the wealthy elite.', 'It was traditionally made from sea snails, a long and labor-intensive process that made it highly valued.', 'Today, purple is often associated with creativity, imagination, and spiritual depth.', 'It can represent both luxury and mystery, making it a favorite color in art and design.']
