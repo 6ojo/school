@@ -103,40 +103,50 @@ let htmlBody3 = `<!DOCTYPE html>
     </html>`
 
 
-//Verify your outputs
-
 function pCounter(htmlBody){
     let count = 0
     let currIndex = 0
 
-    while(true)
-    {
-        (currIndex htmlBody.indexOf("<p>", currIndex)
-         if (currIndex =! -1)
-            {count++}
-        else
-        {
-        return counter}
-    currIndex++
-    }     
+    while(true) {
+        
+        currIndex = htmlBody.indexOf("<p>", currIndex)
+        
+        // cleaner version of old if/else
+        if (currIndex === -1) {
+            break;
+        }
+        
+        count++
+        currIndex++
+    }
+    return count
 }
 
+
 function pTagReader(htmlBody){
-    let currIndex = 0
-    let closeIndex = 0
+    let pContents = []
+    let currentIndex = 0
 
-    while(true){
-        (currIndex htmlBody.indexOf("<p>", currIndex)
-        (closeIndex htmlBody.indexOf("</p>", c)
-         
-         
+    while (true) {
+        let pStart = htmlBody.indexOf('<p>', currentIndex)
+        //make it not time out
+        if (pStart === -1) {
+            break
+        }
+
         
+        let pEnd = htmlBody.indexOf('</p>', pStart)
+        if (pEnd === -1) {
+            break;
+        }
 
+        let content = htmlBody.substring(pStart + 3, pEnd)
+        pContents.push(content)
 
+        currentIndex = pEnd + 4
+    }
 
-
-
-
+    return pContents
 }
     
 
@@ -150,4 +160,3 @@ console.log(pTagReader(htmlBody2)) //['Fire dragons are often described as power
 console.log(pCounter(htmlBody3)) //4
 
 console.log(pTagReader(htmlBody3)) //['Purple dye was once so rare and expensive that it was worn only by royalty and the wealthy elite.', 'It was traditionally made from sea snails, a long and labor-intensive process that made it highly valued.', 'Today, purple is often associated with creativity, imagination, and spiritual depth.', 'It can represent both luxury and mystery, making it a favorite color in art and design.']
-
