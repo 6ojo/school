@@ -4,7 +4,6 @@
 //Input: email address string <first_name>.<last_name>@<email_domain>.<top_level_domain>
 //Output: username following the requirements:
 //First three characters of first name, last three characters of last name and the email domain
-//ex: hank.hawk@tvusd.org --> hanawktvusd
 
 
 
@@ -47,4 +46,5 @@ function defense(user) {
         let boolean = false;
     }
     return;
+
 }
