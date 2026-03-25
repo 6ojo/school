@@ -1,0 +1,75 @@
+:root {
+  font-family: "Cal Sans", sans-serif;
+  word-spacing: 10px;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#root{  
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2{
+  padding: auto;
+}
+
+button{
+  background-image: url('himel.webp');
+  background-color: darkslateblue;
+  padding: 1em;
+  position: relative;
+}
+
+
+
+.reset{
+  font-family: "Cal Sans", sans-serif;
+  background-image: none;
+  border-color: #1a1a1a;
+  margin-top: 10px;
+}
+
+.square {
+  background-color: #646cff;
+  vertical-align: top;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  transition: border-color 0.25s;
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+button:hover {
+  border-color: #646cff;
+}
